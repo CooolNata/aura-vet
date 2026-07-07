@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Врачи — Aura Vet</title>
+<meta name="description" content="Команда ветеринарных врачей клиники Aura Vet: опыт, специализация и образование каждого специалиста.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%232a6df4'/%3E%3Cpath fill='white' d='M4.5 12.5c1.1 0 2-1.1 2-2.5s-.9-2.5-2-2.5-2 1.1-2 2.5.9 2.5 2 2.5zm5-4c1.1 0 2-1.2 2-2.75S10.6 3 9.5 3s-2 1.2-2 2.75S8.4 8.5 9.5 8.5zm5 0c1.1 0 2-1.2 2-2.75S15.6 3 14.5 3s-2 1.2-2 2.75S13.4 8.5 14.5 8.5zm5 1.5c0-1.4-.9-2.5-2-2.5s-2 1.1-2 2.5.9 2.5 2 2.5 2-1.1 2-2.5zM12 11c-2.8 0-6 2.2-6 5.2 0 1.9 1.4 3.3 3.2 3.3.9 0 1.6-.3 2.4-.6.5-.2.9-.3 1.4-.3.5 0 .9.1 1.4.3.8.3 1.5.6 2.4.6 1.8 0 3.2-1.4 3.2-3.3 0-3-3.2-5.2-6-5.2z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 12.5c1.1 0 2-1.1 2-2.5s-.9-2.5-2-2.5-2 1.1-2 2.5.9 2.5 2 2.5zm5-4c1.1 0 2-1.2 2-2.75S10.6 3 9.5 3s-2 1.2-2 2.75S8.4 8.5 9.5 8.5zm5 0c1.1 0 2-1.2 2-2.75S15.6 3 14.5 3s-2 1.2-2 2.75S13.4 8.5 14.5 8.5zm5 1.5c0-1.4-.9-2.5-2-2.5s-2 1.1-2 2.5.9 2.5 2 2.5 2-1.1 2-2.5zM12 11c-2.8 0-6 2.2-6 5.2 0 1.9 1.4 3.3 3.2 3.3.9 0 1.6-.3 2.4-.6.5-.2.9-.3 1.4-.3.5 0 .9.1 1.4.3.8.3 1.5.6 2.4.6 1.8 0 3.2-1.4 3.2-3.3 0-3-3.2-5.2-6-5.2z"/></svg></span>
+      Aura<span class="accent">Vet</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="index.html#services">Услуги</a>
+      <a href="doctors.html" class="active">Врачи</a>
+      <a href="booking.html">Онлайн-запись</a>
+      <a href="prices.html">Цены</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <div class="header-phone"><small>Круглосуточно</small>+7 (495) 000-00-00</div>
+      <a href="booking.html" class="btn btn-primary btn-sm">Записаться</a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="container section-head">
+      <span class="eyebrow">Команда клиники</span>
+      <h1 class="section-title">Наши врачи</h1>
+      <p class="section-sub">Каждый специалист регулярно проходит стажировки и ведёт пациента от первичного приёма до полного выздоровления.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container">
+      <div class="doctors-grid">
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1645066928295-2506defde470?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Андрей Соколов, хирург"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Ведущий хирург</span>
+            <h3 class="doctor-name">Андрей Соколов</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 14 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> МГАВМиБ им. Скрябина, 2011</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Мария Литвинова, кардиолог"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Терапевт-кардиолог</span>
+            <h3 class="doctor-name">Мария Литвинова</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 10 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> СПбГУВМ, 2015, специализация — кардиология</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Игорь Панов, стоматолог"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Стоматолог</span>
+            <h3 class="doctor-name">Игорь Панов</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 8 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> МГАВМиБ им. Скрябина, 2017</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1659353888906-adb3e0041693?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Ольга Дмитриева, врач УЗИ и рентгенодиагностики"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Врач УЗИ и рентгенодиагностики</span>
+            <h3 class="doctor-name">Ольга Дмитриева</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 9 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> Казанская ГАВМ, 2016</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1642975967602-653d378f3b5b?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Сергей Волков, терапевт"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Главный врач-терапевт</span>
+            <h3 class="doctor-name">Сергей Волков</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 18 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> МГАВМиБ им. Скрябина, 2007</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Анна Кузьмина, врач лабораторной диагностики"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Врач лабораторной диагностики</span>
+            <h3 class="doctor-name">Анна Кузьмина</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 7 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> МГУ им. Ломоносова, биологический факультет, 2018</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Павел Ершов, терапевт по вакцинации"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Терапевт, вакцинация</span>
+            <h3 class="doctor-name">Павел Ершов</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 6 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> СПбГУВМ, 2019</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+        <div class="card doctor-card">
+          <div class="doctor-photo"><img src="https://images.unsplash.com/photo-1736289173074-df6009da27c9?w=500&h=500&fit=crop&crop=faces&auto=format&q=80" alt="Наталья Орлова, грумер"></div>
+          <div class="doctor-body">
+            <span class="doctor-spec">Грумер-стилист</span>
+            <h3 class="doctor-name">Наталья Орлова</h3>
+            <div class="doctor-meta">
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg> Опыт работы 5 лет</div>
+              <div class="meta-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 10L12 5 2 10l10 5 10-5zM6 12v5c3 2 9 2 12 0v-5"/></svg> Международная школа груминга, 2020</div>
+            </div>
+            <a href="booking.html" class="btn btn-outline btn-sm btn-block">Записаться</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight soft">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h2>Не знаете, к какому врачу записаться?</h2>
+          <p>Оставьте заявку — администратор подберёт специалиста по описанию симптомов.</p>
+        </div>
+        <a href="booking.html" class="btn btn-primary">Записаться онлайн</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 12.5c1.1 0 2-1.1 2-2.5s-.9-2.5-2-2.5-2 1.1-2 2.5.9 2.5 2 2.5zm5-4c1.1 0 2-1.2 2-2.75S10.6 3 9.5 3s-2 1.2-2 2.75S8.4 8.5 9.5 8.5zm5 0c1.1 0 2-1.2 2-2.75S15.6 3 14.5 3s-2 1.2-2 2.75S13.4 8.5 14.5 8.5zm5 1.5c0-1.4-.9-2.5-2-2.5s-2 1.1-2 2.5.9 2.5 2 2.5 2-1.1 2-2.5zM12 11c-2.8 0-6 2.2-6 5.2 0 1.9 1.4 3.3 3.2 3.3.9 0 1.6-.3 2.4-.6.5-.2.9-.3 1.4-.3.5 0 .9.1 1.4.3.8.3 1.5.6 2.4.6 1.8 0 3.2-1.4 3.2-3.3 0-3-3.2-5.2-6-5.2z"/></svg></span>
+          AuraVet
+        </a>
+        <p>Частная ветеринарная клиника премиального уровня. Заботимся о тех, кто не может рассказать, что у него болит.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3L2.7 11.7c-1.1.4-1.1 1.9.1 2.2l4.6 1.4 1.8 5.6c.3.9 1.5 1.1 2.1.3l2.5-3.1 4.7 3.5c.9.7 2.2.2 2.4-.9l3.1-14.7c.2-1.2-1-2-2.1-1.7zM8.9 14.8l9.6-6.7c.3-.2.6.1.3.4L11 15.6l-.3 3.3-1.8-4.1z"/></svg></a>
+          <a href="https://wa.me/74950000000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1120 10a8 8 0 01-8 10zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3.1-2.5-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5-.1-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Навигация</h4>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="index.html#services">Услуги</a></li>
+          <li><a href="doctors.html">Врачи</a></li>
+          <li><a href="booking.html">Онлайн-запись</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Клиника</h4>
+        <ul>
+          <li><a href="prices.html">Цены</a></li>
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="blog.html">Блог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <ul>
+          <li class="foot-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Москва, ул. Тверская, 1</span></li>
+          <li class="foot-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 013.1 4.2 2 2 0 015.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.9 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.9 2z"/></svg><span>+7 (495) 000-00-00</span></li>
+          <li class="foot-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" d="M12 6v6l4 2"/></svg><span>Круглосуточно, без выходных</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> Aura Vet. Все права защищены.</span>
+      <span>Лицензия № 77.RU.001.2026</span>
+    </div>
+  </div>
+</footer>
+
+<a class="floating-whatsapp" href="https://wa.me/74950000000" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1120 10a8 8 0 01-8 10zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-1.3-.6-2.2-1.1-3.1-2.5-.2-.4.2-.4.6-1.2.1-.2 0-.3 0-.5-.1-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

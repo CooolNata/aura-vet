@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(python3 -c \"import playwright\")",
+      "Bash(npm ls *)",
+      "Read(//opt/homebrew/lib/node_modules/**)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx --yes playwright install chromium --with-deps)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-valentin-aura-vet/ddff7947-12d1-4b7e-96d4-ec0949f264ab/scratchpad/pwtest)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "Bash(mkdir -p shots)",
+      "Bash(node drive.js)"
+    ]
+  }
+}
