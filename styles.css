@@ -1442,6 +1442,25 @@ button { font-family: inherit; cursor: pointer; }
 
 .floating-whatsapp:hover { transform: scale(1.08); }
 .floating-whatsapp svg { width: 30px; height: 30px; }
+.floating-max {
+  position: fixed;
+  bottom: 26px;
+  right: 100px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #0077FF;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px -8px rgba(0, 119, 255, 0.6);
+  z-index: 300;
+  transition: transform 0.2s ease;
+}
+
+.floating-max:hover { transform: scale(1.08); }
+.floating-max svg, .floating-max img { width: 30px; height: 30px; display: block; }
 
 /* =========================================================
    utilities

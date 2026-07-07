@@ -13,7 +13,19 @@
       "Bash(npm install *)",
       "Bash(npx playwright *)",
       "Bash(mkdir -p shots)",
-      "Bash(node drive.js)"
+      "Bash(node drive.js)",
+      "Bash(python3 -m http.server 8934)",
+      "Bash(curl -sI http://localhost:8934/index.html)",
+      "Bash(node -e ' *)",
+      "Bash(node baseline.js)",
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -sI \"https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=1200&h=990&fit=crop&auto=format&q=80\")",
+      "Bash(curl -s \"https://images.unsplash.com/photo-1770836037793-95bdbf190f71?w=600&h=495&fit=crop&auto=format&q=70\" -o /private/tmp/claude-501/-Users-valentin-aura-vet/a70cbb3d-330a-46c9-9303-d55045fc7402/scratchpad/candidate1.jpg)",
+      "Bash(curl *)",
+      "Bash(node after.js)",
+      "Bash(node scrolltest.js)",
+      "Bash(pkill -f \"http.server 8934\")"
     ]
   }
 }
