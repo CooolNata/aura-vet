@@ -8,10 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
   initBlogModal();
   initBookingWizard();
   initContactForm();
+  initScrollReveal();
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
   });
 });
+
+/* ---------------- scroll reveal ---------------- */
+
+function initScrollReveal() {
+  var targets = document.querySelectorAll('.reveal');
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+
+  document.documentElement.classList.add('has-reveal');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  targets.forEach(function (t) { io.observe(t); });
+}
 
 /* ---------------- mobile nav ---------------- */
 
@@ -234,6 +255,46 @@ function initBookingWizard() {
   var successPanel = document.querySelector('.booking-success');
   var panelWrap = document.querySelector('.booking-panel');
 
+  var doctorCards = document.querySelectorAll('.doctor-pick[data-doctor]');
+  var doctorNotice = document.querySelector('.doctor-pick-notice');
+
+  /* filter doctors on step 2 to match the specialty of the chosen service */
+  function filterDoctorsByService() {
+    if (!doctorCards.length) return;
+
+    var matching = [];
+    doctorCards.forEach(function (c) {
+      if (c.getAttribute('data-specialty') === state.service) matching.push(c);
+    });
+
+    var showAll = matching.length === 0;
+
+    doctorCards.forEach(function (c) {
+      c.style.display = (showAll || matching.indexOf(c) !== -1) ? '' : 'none';
+    });
+
+    if (doctorNotice) {
+      if (showAll) {
+        doctorNotice.textContent = 'Для выбранной услуги нет закреплённого специалиста — администратор подберёт врача из команды клиники после подтверждения записи.';
+        doctorNotice.style.display = '';
+      } else {
+        doctorNotice.style.display = 'none';
+      }
+    }
+
+    /* drop a previously selected doctor if it's no longer visible */
+    if (state.doctor) {
+      var selectedCard = document.querySelector('.doctor-pick[data-doctor="' + state.doctor + '"]');
+      if (selectedCard && selectedCard.style.display === 'none') {
+        selectedCard.classList.remove('is-selected');
+        state.doctor = null;
+        state.doctorLabel = null;
+        document.querySelector('#to-step-3').disabled = true;
+        updateSummary();
+      }
+    }
+  }
+
   /* service selection */
   document.querySelectorAll('.pick-card[data-service]').forEach(function (card) {
     card.addEventListener('click', function () {
@@ -243,13 +304,14 @@ function initBookingWizard() {
       state.serviceLabel = card.querySelector('.pick-title').textContent;
       updateSummary();
       document.querySelector('#to-step-2').disabled = false;
+      filterDoctorsByService();
     });
   });
 
   /* doctor selection */
-  document.querySelectorAll('.doctor-pick[data-doctor]').forEach(function (card) {
+  doctorCards.forEach(function (card) {
     card.addEventListener('click', function () {
-      document.querySelectorAll('.doctor-pick[data-doctor]').forEach(function (c) { c.classList.remove('is-selected'); });
+      doctorCards.forEach(function (c) { c.classList.remove('is-selected'); });
       card.classList.add('is-selected');
       state.doctor = card.getAttribute('data-doctor');
       state.doctorLabel = card.querySelector('.pick-title').textContent;

@@ -56,6 +56,10 @@ body {
 
 img { max-width: 100%; display: block; }
 
+/* unify all outline icons to a single line weight, regardless of the
+   stroke-width value authored inline on individual <svg> elements */
+svg[fill="none"][stroke="currentColor"] { stroke-width: 1.8; }
+
 a { color: inherit; text-decoration: none; }
 
 ul { margin: 0; padding: 0; list-style: none; }
@@ -116,7 +120,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .section {
-  padding: 96px 0;
+  padding: 122px 0;
 }
 
 .section.soft {
@@ -124,7 +128,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .section.tight {
-  padding: 64px 0;
+  padding: 82px 0;
 }
 
 /* ---------- buttons ---------- */
@@ -175,6 +179,19 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .btn-dark:hover { transform: translateY(-2px); background: var(--blue-900); }
+
+.btn-muted {
+  background: transparent;
+  color: var(--ink-500);
+  border-color: var(--ink-100);
+  box-shadow: none;
+}
+
+.btn-muted:hover {
+  border-color: var(--ink-300);
+  color: var(--ink-900);
+  transform: translateY(-2px);
+}
 
 .btn-sm { padding: 11px 22px; font-size: 14px; }
 
@@ -387,7 +404,7 @@ button { font-family: inherit; cursor: pointer; }
    ========================================================= */
 
 .hero {
-  padding: 56px 0 96px;
+  padding: 64px 0 122px;
   overflow: hidden;
 }
 
@@ -438,6 +455,15 @@ button { font-family: inherit; cursor: pointer; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-media-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(15, 32, 59, 0) 45%, rgba(15, 32, 59, 0.45) 100%),
+    linear-gradient(135deg, rgba(42, 109, 244, 0.22), rgba(20, 184, 166, 0.14));
+  pointer-events: none;
 }
 
 .floating-card {
@@ -516,11 +542,11 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--white);
   border-radius: var(--radius-md);
   border: 1px solid var(--ink-100);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.3s cubic-bezier(.22,.61,.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.015);
   box-shadow: var(--shadow-card);
   border-color: transparent;
 }
@@ -674,7 +700,7 @@ button { font-family: inherit; cursor: pointer; }
 .doctor-card .btn { margin-top: auto; }
 
 .page-hero {
-  padding: 56px 0 40px;
+  padding: 68px 0 52px;
   text-align: center;
 }
 
@@ -1086,7 +1112,7 @@ button { font-family: inherit; cursor: pointer; }
 .pick-card .pick-icon svg { width: 22px; height: 22px; }
 
 .pick-card .pick-title { font-weight: 700; font-size: 15px; }
-.pick-card .pick-sub { font-size: 13px; color: var(--ink-500); margin-top: 2px; }
+.pick-card .pick-sub { font-size: 13px; color: var(--ink-500); margin-left: 8px; }
 
 .doctor-pick {
   display: flex;
@@ -1118,6 +1144,16 @@ button { font-family: inherit; cursor: pointer; }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 14px;
+}
+
+.doctor-pick-notice {
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--ink-700);
+  margin-bottom: 16px;
 }
 
 /* calendar */
@@ -1444,6 +1480,29 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.has-reveal .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(.22,.61,.36,1), transform 0.7s cubic-bezier(.22,.61,.36,1);
+}
+
+.has-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-reveal .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
@@ -1497,7 +1556,9 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 64px 0; }
+  .section { padding: 80px 0; }
+  .section.tight { padding: 64px 0; }
+  .hero { padding: 48px 0 80px; }
   .services-grid, .why-grid, .doctors-grid, .reviews-grid, .blog-grid, .contact-grid { grid-template-columns: 1fr; }
   .stats-strip { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }

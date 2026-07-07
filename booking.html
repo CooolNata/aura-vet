@@ -49,7 +49,7 @@
     </div>
   </section>
 
-  <section class="section tight">
+  <section class="reveal section tight">
     <div class="container">
       <div class="booking-wrap">
         <div>
@@ -78,7 +78,7 @@
                 </button>
                 <button type="button" class="pick-card" data-service="dental">
                   <span class="pick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3c-2 0-3 1.3-4.5 1.3S5 3 3.8 3.9C2.6 4.8 2 6.5 2.3 8.5c.3 2 1.4 3 1.8 5 .4 2.2.6 5.5 2 5.5 1.3 0 1.4-3 2-4.7.4-1.1.9-1.8 1.9-1.8s1.5.7 1.9 1.8c.6 1.7.7 4.7 2 4.7 1.4 0 1.6-3.3 2-5.5.4-2 1.5-3 1.8-5 .3-2-.3-3.7-1.5-4.6C17 3 15.5 4.3 13.5 4.3S14 3 12 3z"/></svg></span>
-                  <span><span class="pick-title">Стоматология</span><span class="pick-sub">Чистка и лечение зубов</span></span>
+                  <span><span class="pick-title">Стоматология</span> <span class="pick-sub">Чистка и лечение зубов</span></span>
                 </button>
                 <button type="button" class="pick-card" data-service="xray">
                   <span class="pick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V6a2 2 0 012-2h2M4 16v2a2 2 0 002 2h2M20 8V6a2 2 0 00-2-2h-2M20 16v2a2 2 0 01-2 2h-2"/><circle cx="12" cy="12" r="3"/></svg></span>
@@ -109,31 +109,40 @@
             <!-- STEP 2 — DOCTOR -->
             <div class="booking-step" data-step="2">
               <h2>Выберите врача</h2>
-              <p class="step-desc">Любой специалист клиники готов принять вашего питомца.</p>
+              <p class="step-desc">Показаны специалисты по выбранной услуге.</p>
+              <p class="doctor-pick-notice" style="display:none;"></p>
               <div class="doctor-pick-grid">
-                <button type="button" class="doctor-pick" data-doctor="sokolov">
+                <button type="button" class="doctor-pick" data-doctor="sokolov" data-specialty="surgery">
                   <img src="https://images.unsplash.com/photo-1645066928295-2506defde470?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Андрей Соколов">
                   <span><span class="pick-title">Андрей Соколов</span><br><span class="pick-sub">Хирург</span></span>
                 </button>
-                <button type="button" class="doctor-pick" data-doctor="litvinova">
+                <button type="button" class="doctor-pick" data-doctor="litvinova" data-specialty="cardio">
                   <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Мария Литвинова">
                   <span><span class="pick-title">Мария Литвинова</span><br><span class="pick-sub">Кардиолог</span></span>
                 </button>
-                <button type="button" class="doctor-pick" data-doctor="panov">
+                <button type="button" class="doctor-pick" data-doctor="panov" data-specialty="dental">
                   <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Игорь Панов">
                   <span><span class="pick-title">Игорь Панов</span><br><span class="pick-sub">Стоматолог</span></span>
                 </button>
-                <button type="button" class="doctor-pick" data-doctor="volkov">
+                <button type="button" class="doctor-pick" data-doctor="volkov" data-specialty="therapy">
                   <img src="https://images.unsplash.com/photo-1642975967602-653d378f3b5b?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Сергей Волков">
                   <span><span class="pick-title">Сергей Волков</span><br><span class="pick-sub">Терапевт</span></span>
                 </button>
-                <button type="button" class="doctor-pick" data-doctor="dmitrieva">
+                <button type="button" class="doctor-pick" data-doctor="dmitrieva" data-specialty="xray">
                   <img src="https://images.unsplash.com/photo-1659353888906-adb3e0041693?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Ольга Дмитриева">
                   <span><span class="pick-title">Ольга Дмитриева</span><br><span class="pick-sub">УЗИ, рентген</span></span>
                 </button>
-                <button type="button" class="doctor-pick" data-doctor="kuzmina">
+                <button type="button" class="doctor-pick" data-doctor="kuzmina" data-specialty="lab">
                   <img src="https://images.unsplash.com/photo-1643297654416-05795d62e39c?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Анна Кузьмина">
                   <span><span class="pick-title">Анна Кузьмина</span><br><span class="pick-sub">Лаборатория</span></span>
+                </button>
+                <button type="button" class="doctor-pick" data-doctor="ershov" data-specialty="vaccination">
+                  <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Павел Ершов">
+                  <span><span class="pick-title">Павел Ершов</span><br><span class="pick-sub">Терапевт, вакцинация</span></span>
+                </button>
+                <button type="button" class="doctor-pick" data-doctor="orlova" data-specialty="grooming">
+                  <img src="https://images.unsplash.com/photo-1736289173074-df6009da27c9?w=200&h=200&fit=crop&crop=faces&auto=format&q=80" alt="Наталья Орлова">
+                  <span><span class="pick-title">Наталья Орлова</span><br><span class="pick-sub">Грумер-стилист</span></span>
                 </button>
               </div>
               <div class="step-actions">
